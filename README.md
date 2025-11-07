@@ -13,8 +13,6 @@ The project uses **deep learning** and **computer vision** to automatically iden
   - 92.07% test accuracy on the *Complete Combined Dataset*  
 - **Four mosquito species classified:**  
   *Aedes aegypti*, *Aedes albopictus*, *Anopheles stephensi*, *Culex quinquefasciatus*  
-- **Extensible** — Model generalizes to unseen mosquito videos and supports real-time inference (~45 FPS)
-
 ---
 
 ## Tech Stack
