@@ -5,20 +5,19 @@ The project uses **deep learning** and **computer vision** to automatically iden
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 🧬 **Dual Model Approach** — Custom CNN and Transfer Learning using **ResNet50 (ImageNet pretrained)**  
-- 🎥 **Video Support** — Integrated **YOLOv8 + OpenCV** pipeline for frame extraction and classification  
-- 📊 **High Accuracy** —  
+- **Dual Model Approach** — Custom CNN and Transfer Learning using **ResNet50 (ImageNet pretrained)**   
+- **High Accuracy** —  
   - 99.48% test accuracy on the *Smashed Condition* dataset  
   - 92.07% test accuracy on the *Complete Combined Dataset*  
-- 🧩 **Four mosquito species classified:**  
+- **Four mosquito species classified:**  
   *Aedes aegypti*, *Aedes albopictus*, *Anopheles stephensi*, *Culex quinquefasciatus*  
-- 🔁 **Extensible** — Model generalizes to unseen mosquito videos and supports real-time inference (~45 FPS)
+- **Extensible** — Model generalizes to unseen mosquito videos and supports real-time inference (~45 FPS)
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Category | Tools / Frameworks |
 |-----------|-------------------|
@@ -32,7 +31,7 @@ The project uses **deep learning** and **computer vision** to automatically iden
 
 ---
 
-## 🧪 Methodology
+##  Methodology
 
 1. **Data Loading & Preprocessing**
    - Datasets: *Vector Mosquito Images* (Pise et al., 2022) and *Mosquito-on-Human-Skin* (Ong, 2022)
@@ -48,15 +47,9 @@ The project uses **deep learning** and **computer vision** to automatically iden
    - Base: `ResNet50(weights='imagenet', include_top=False)`
    - Added: GlobalAveragePooling2D → Dense(64, ReLU) → Dense(n_classes, Softmax)
    - Trained for 50 epochs on augmented datasets
-
-4. **Video Classification**
-   - Extracted frames using **OpenCV**
-   - Applied **YOLOv8** for mosquito detection (confidence > 0.5)
-   - Classified detected frames via trained **ResNet50 model**
-
 ---
 
-## 📊 Results Summary
+##  Results Summary
 
 | Dataset | Model | Test Accuracy |
 |----------|--------|---------------|
@@ -66,10 +59,4 @@ The project uses **deep learning** and **computer vision** to automatically iden
 | Complete Dataset | ResNet50 | **92.07 %** |
 
 - ResNet50 consistently outperformed the custom CNN across all datasets  
-- Video pipeline achieved real-time frame classification (~45 FPS)
 
----
-
-## 📽️ Example Output
-
-Detected mosquito frames from video, classified as *Aedes aegypti* with high confidence.
